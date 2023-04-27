@@ -28,7 +28,7 @@ const Results = (props) => {
 							onChange={addNewResults}
 								placeholder="Search..."
 								type="text"
-								className="pl-6 pb-1 w-full text-xl h-full border border-gray-500 rounded-3xl absolute"
+								className="pl-6 pb-1 w-full text-xl h-full border border-gray-500 rounded-3xl absolute bg-white text-black"
 							/>
 							<div className="top-3 left-4 absolute"></div>
 							<div className="top-3 right-4 absolute">

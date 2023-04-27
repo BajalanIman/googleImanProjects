@@ -11,10 +11,10 @@ const Navigationbar = () => {
 	return (
 		<div className="fixed flex right-20  gap-5 top-5 text-xl">
 			{shoModal.toString()}
-			<span onClick={openModal} className="bg-white font-bold">
+			<span onClick={openModal} className="bg-white font-bold text-black">
 				Gmail
 			</span>
-			<span onClick={openModal} className="bg-white font-bold">
+			<span onClick={openModal} className="bg-white font-bold text-black">
 				Images
 			</span>
 			<svg

@@ -68,7 +68,7 @@ const FirstComponent = () => {
 					placeholder="Search..."
 					onChange={ShowInformation}
 					type="text"
-					className="pl-14 pb-1 w-full text-xl h-full border border-gray-500 rounded-3xl absolute"
+					className="pl-14 pb-1 w-full text-xl h-full border border-gray-500 rounded-3xl absolute bg-white text-black"
 				/>
 				{sowSearchAtTop && (
 					<div className="absolute pb-8 bg-white text-xl text-blue-400 font-bold h-3 mt-[-14px] ml-14 pl-3 pr-6 rounded-full ">
