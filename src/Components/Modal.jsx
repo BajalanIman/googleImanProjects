@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const FourthComponent = (props) => {
+const Modal = (props) => {
 	const [closeModal, setCloseModal] = useState(true);
 
 	let modalState = props.toggle;
@@ -46,4 +46,4 @@ const FourthComponent = (props) => {
 	);
 };
 
-export default FourthComponent;
+export default Modal;

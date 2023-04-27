@@ -1,9 +1,21 @@
+
 import uuid from "react-uuid";
 
 const Results = (props) => {
-	const info = ["Iman", "Iman-1"];
-	const information = props.submitSearchInfo;
-	const concatedInfo = info.concat(information);
+	let info = ["Iman ", "Iman-1"];
+	let information = props.submitSearchInfo;
+	let concatedInfo = info.concat(information);
+
+	let newResults="";
+	const addNewResults =(e)=>{
+		e.preventDefault();
+		newResults= e.target.value;
+	};
+
+	const addBySearchBTN =()=>{
+		concatedInfo=concatedInfo.concat(newResults);
+		console.log(concatedInfo);
+	}
 
 	return (
 		<div>
@@ -13,6 +25,7 @@ const Results = (props) => {
 						<img src="./logo.png" alt="logo" className="w-44 mt-3" />
 						<div className="mt-8 w-[600px] h-14 border rounded-3xl flex relative">
 							<input
+							onChange={addNewResults}
 								placeholder="Search..."
 								type="text"
 								className="pl-6 pb-1 w-full text-xl h-full border border-gray-500 rounded-3xl absolute"
@@ -72,6 +85,7 @@ const Results = (props) => {
 										/>
 									</svg>
 									<svg
+									    onClick={addBySearchBTN}
 										xmlns="http://www.w3.org/2000/svg"
 										fill="none"
 										viewBox="0 0 24 24"
@@ -89,20 +103,15 @@ const Results = (props) => {
 							</div>
 						</div>
 					</div>
-					<div className="h-full mb-32">
+					<div className="h-full mb-32 break-words">
 						{concatedInfo.map((e) => (
 							<div
 								key={uuid()}
-								className="flex justify-start items-start pl-14 mb-12 flex-col gap-2 w-[750px]"
+								className="flex justify-start items-start pl-14 mb-12 flex-col gap-2 w-[750px] break-words"
 							>
-								<span className="text-gray-500">https://pizza-1.com</span>
+								<span className="text-gray-500">https://{e}.com</span>
 								<span className="text-blue-700 text-2xl">{e}</span>
-								<span className="text-gray-900 text-justify">
-									The pizza is made of dough and also need salt, sugar, yeast
-									and water. All it mixed creates an elastic dough that can be
-									molded in many different shapes, usually is a round, square,
-									or a rectangle.The pizza is made of dough and also need salt,
-									sugar, yeast and water.
+								<span className="text-gray-900 text-justify break-all">{e.repeat(50)}
 								</span>
 							</div>
 						))}

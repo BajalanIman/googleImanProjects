@@ -1,18 +1,18 @@
 import "./App.css";
 
 import React from "react";
-import FirstComponent from "./GoogleProject/FirstComponent";
-import SecondComponent from "./GoogleProject/SecondComponent";
-import ThirdComponent from "./GoogleProject/ThirdComponent";
+import Body from "./Components/Body";
+import Navigationbarleft from "./Components/Navigationbarleft";
+import Navigationbar from "./Components/Navigationbar";
 
 const App = () => {
 	return (
 		<div className="flex font-serif justify-center items-center w-screen h-screen bg-white m-[-20px]">
-			<SecondComponent />
+			<Navigationbarleft />
       <div className="flex justify-center items-center">
-			<FirstComponent />
+			<Body />
       </div>
-			<ThirdComponent />
+			<Navigationbar />
 		</div>
 	);
 };

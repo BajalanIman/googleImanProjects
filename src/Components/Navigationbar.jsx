@@ -1,7 +1,7 @@
 import { useState } from "react";
-import FourthComponent from "./FourthComponent";
+import Modal from "./Modal";
 
-const ThirdComponent = () => {
+const Navigationbar = () => {
 	const [shoModal, setShoModal] = useState(false);
 
 	const openModal = () => {
@@ -38,8 +38,8 @@ const ThirdComponent = () => {
 			>
 				Sign in
 			</button>
-			<FourthComponent toggle={shoModal} />
+			<Modal toggle={shoModal} />
 		</div>
 	);
 };
-export default ThirdComponent;
+export default Navigationbar;
